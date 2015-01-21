@@ -1,4 +1,5 @@
+	.intel_syntax noprefix
 	.globl	main
 main:
-	movl	$7, %eax
+	mov eax,0
 	ret
