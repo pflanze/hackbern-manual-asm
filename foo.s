@@ -1,9 +1,5 @@
-	.file	"foo.c"
-	.text
 	.globl	main
-	.type	main, @function
 main:
-.LFB0:
 	.cfi_startproc
 	pushl	%ebp
 	.cfi_def_cfa_offset 8
