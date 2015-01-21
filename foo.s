@@ -4,9 +4,9 @@
 	.intel_syntax noprefix
 	.globl	main
 
-oddP: ;; eax -> eax
+oddP:
 	cmp eax,0
-	bne oddP_1
+	jne oddP_1
 	mov eax, false
 	ret
 oddP_1:	sub eax,1
@@ -14,7 +14,7 @@ oddP_1:	sub eax,1
 	
 evenP:	
 	cmp eax,0
-	beq evenP_end
+	je evenP_end
 	sub eax,1
 	jmp oddP
 evenP_end:
