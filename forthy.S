@@ -13,8 +13,7 @@ main:
 	mov ebp, esp
 	and esp, -16
 	sub esp, 16
-	mov eax, OFFSET FLAT:.hello
-	mov [esp], eax
+	mov [esp], OFFSET FLAT:.hello
 	call puts
 	mov eax, 0
 	leave
