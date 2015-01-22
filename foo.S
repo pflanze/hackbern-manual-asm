@@ -4,6 +4,8 @@
 	.intel_syntax noprefix
 	.globl	main
 
+#if 0
+	;; unoptimized
 oddP:
 	cmp eax,0
 	je oddP_end
@@ -21,6 +23,32 @@ evenP:
 evenP_end:
 	mov eax, TRUE
 	ret
+#endif
+	
+
+	;; optimized
+evenP:	
+	cmp eax,0
+	je evenP_end
+	sub eax,1
+	jmp oddP
+evenP_end:
+	mov eax, TRUE
+	ret
+
+oddP:
+	cmp eax,0
+	je oddP_end
+	sub eax,1
+	;; inlined evenP
+	cmp eax,0
+	je evenP_end
+	sub eax,1
+	jmp oddP
+oddP_end:
+	mov eax, FALSE
+	ret
+	
 	
 main:
 	mov eax,1000090000
