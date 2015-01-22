@@ -9,12 +9,8 @@
 	
 main:
 	# push hello
-	push ebp
-	mov ebp, esp
-	and esp, -16
-	sub esp, 16
-	mov DWORD PTR [esp], OFFSET FLAT:.hello
+	push OFFSET FLAT:.hello
 	call puts
+	pop eax
 	mov eax, 0
-	leave
 	ret
