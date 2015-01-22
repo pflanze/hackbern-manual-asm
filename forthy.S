@@ -11,6 +11,6 @@ main:
 	# push hello
 	push OFFSET FLAT:.hello
 	call puts
-	pop eax
+	add esp, 4
 	mov eax, 0
 	ret
