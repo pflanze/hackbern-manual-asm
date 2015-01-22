@@ -23,6 +23,6 @@ evenP_end:
 	
 main:
 	mov eax,7
-	jsr evenP
-	eor eax, 1
+	call evenP
+	xor eax, 1
 	ret
