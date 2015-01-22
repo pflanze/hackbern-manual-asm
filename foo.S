@@ -53,6 +53,14 @@ oddP_aftercmp:
 	sub eax,1
 	je evenP_end
 	sub eax,1
+	je oddP_end
+	sub eax,1
+	je evenP_end
+	sub eax,1
+	je oddP_end
+	sub eax,1
+	je evenP_end
+	sub eax,1
 	jmp oddP_aftercmp
 oddP_end:
 	mov eax, FALSE
