@@ -30,7 +30,7 @@ evenP_end:
 evenP:	
 	cmp eax,0
 	je evenP_end
-	sub eax,1
+	dec eax
 	jmp oddP
 evenP_end:
 	mov eax, TRUE
@@ -40,27 +40,27 @@ oddP:
 	cmp eax,0
 oddP_aftercmp:	
 	je oddP_end
-	sub eax,1
+	dec eax
 	# inlined evenP
 	je evenP_end
-	sub eax,1
+	dec eax
 	# more inlines
 	je oddP_end
-	sub eax,1
+	dec eax
 	je evenP_end
-	sub eax,1
+	dec eax
 	je oddP_end
-	sub eax,1
+	dec eax
 	je evenP_end
-	sub eax,1
+	dec eax
 	je oddP_end
-	sub eax,1
+	dec eax
 	je evenP_end
-	sub eax,1
+	dec eax
 	je oddP_end
-	sub eax,1
+	dec eax
 	je evenP_end
-	sub eax,1
+	dec eax
 	jmp oddP_aftercmp
 oddP_end:
 	mov eax, FALSE
