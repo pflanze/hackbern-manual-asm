@@ -1,4 +1,5 @@
 	.file	"hello_C.c"
+	.intel_syntax noprefix
 	.section	.rodata
 .LC0:
 	.string	"Hello World\n"
@@ -8,16 +9,16 @@
 main:
 .LFB0:
 	.cfi_startproc
-	pushl	%ebp
+	push	ebp
 	.cfi_def_cfa_offset 8
 	.cfi_offset 5, -8
-	movl	%esp, %ebp
+	mov	ebp, esp
 	.cfi_def_cfa_register 5
-	andl	$-16, %esp
-	subl	$16, %esp
-	movl	$.LC0, (%esp)
+	and	esp, -16
+	sub	esp, 16
+	mov	DWORD PTR [esp], OFFSET FLAT:.LC0
 	call	puts
-	movl	$0, %eax
+	mov	eax, 0
 	leave
 	.cfi_restore 5
 	.cfi_def_cfa 4, 4
