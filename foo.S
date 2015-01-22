@@ -44,6 +44,15 @@ oddP_aftercmp:
 	# inlined evenP
 	je evenP_end
 	sub eax,1
+	# more inlines
+	je oddP_end
+	sub eax,1
+	je evenP_end
+	sub eax,1
+	je oddP_end
+	sub eax,1
+	je evenP_end
+	sub eax,1
 	jmp oddP_aftercmp
 oddP_end:
 	mov eax, FALSE
