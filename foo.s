@@ -1,5 +1,5 @@
-#define false 0
-#define	true 1
+#define FALSE 0
+#define	TRUE 1
 
 	.intel_syntax noprefix
 	.globl	main
@@ -7,7 +7,7 @@
 oddP:
 	cmp eax,0
 	jne oddP_1
-	mov eax, false
+	mov eax, FALSE
 	ret
 oddP_1:	sub eax,1
 	jmp evenP
@@ -18,9 +18,11 @@ evenP:
 	sub eax,1
 	jmp oddP
 evenP_end:
-	mov eax, true
+	mov eax, TRUE
 	ret
 	
 main:
 	mov eax,7
-	jmp evenP
+	jsr evenP
+	eor eax, 1
+	ret
