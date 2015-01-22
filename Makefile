@@ -1,8 +1,8 @@
-run: foo
-	./foo
+run: evenodd
+	./evenodd
 
-foo: foo.S
-	gcc foo.S -o foo
+evenodd: evenodd.S
+	gcc evenodd.S -o evenodd
 
-evenodd: evenodd.c
-	gcc -Wall -O3 evenodd.c -o evenodd
+evenodd_C: evenodd_C.c
+	gcc -Wall -O3 evenodd_C.c -o evenodd_C
