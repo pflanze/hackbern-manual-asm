@@ -1,9 +1,9 @@
-run: jit
-	./jit
+run: forthy
+	./forthy
 
 
-jit: jit.S
-	gcc jit.S -o jit
+forthy: forthy.S
+	gcc forthy.S -o forthy
 
 evenodd: evenodd.S
 	gcc evenodd.S -o evenodd
