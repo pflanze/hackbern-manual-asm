@@ -6,11 +6,12 @@
 
 oddP:
 	cmp eax,0
-	jne oddP_1
+	je oddP_end
+	sub eax,1
+	jmp evenP
+oddP_end:
 	mov eax, FALSE
 	ret
-oddP_1:	sub eax,1
-	jmp evenP
 	
 evenP:	
 	cmp eax,0
