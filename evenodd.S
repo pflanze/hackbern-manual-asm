@@ -23,8 +23,8 @@ evenP:
 evenP_end:
 	mov eax, TRUE
 	ret
-#endif
-	
+
+#else
 
 	# optimized
 evenP:	
@@ -66,6 +66,7 @@ oddP_end:
 	mov eax, FALSE
 	ret
 	
+#endif
 	
 main:
 	mov eax,1000090000
