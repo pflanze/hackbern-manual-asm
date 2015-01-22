@@ -5,7 +5,7 @@
 	.globl	main
 
 #if 0
-	;; unoptimized
+	# unoptimized
 oddP:
 	cmp eax,0
 	je oddP_end
@@ -26,7 +26,7 @@ evenP_end:
 #endif
 	
 
-	;; optimized
+	# optimized
 evenP:	
 	cmp eax,0
 	je evenP_end
@@ -40,7 +40,7 @@ oddP:
 	cmp eax,0
 	je oddP_end
 	sub eax,1
-	;; inlined evenP
+	# inlined evenP
 	cmp eax,0
 	je evenP_end
 	sub eax,1
