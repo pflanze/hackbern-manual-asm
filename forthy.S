@@ -16,4 +16,5 @@ main:
 	mov	DWORD PTR [esp], OFFSET FLAT:.hello
 	call puts
 	mov eax, 0
+	leave
 	ret
