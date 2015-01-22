@@ -22,7 +22,7 @@ evenP_end:
 	ret
 	
 main:
-	mov eax,7
+	mov eax,1000090000
 	call evenP
 	xor eax, 1
 	ret
