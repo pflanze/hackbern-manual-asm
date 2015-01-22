@@ -38,13 +38,13 @@ evenP_end:
 
 oddP:
 	cmp eax,0
+oddP_aftercmp:	
 	je oddP_end
 	sub eax,1
 	# inlined evenP
-	cmp eax,0
 	je evenP_end
 	sub eax,1
-	jmp oddP
+	jmp oddP_aftercmp
 oddP_end:
 	mov eax, FALSE
 	ret
