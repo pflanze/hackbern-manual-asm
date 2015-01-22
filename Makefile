@@ -1,6 +1,6 @@
 run: foo
 	./foo
 
-foo: foo.s
-	gcc foo.s -o foo
+foo: foo.S
+	gcc foo.S -o foo
 
