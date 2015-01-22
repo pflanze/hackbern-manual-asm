@@ -1,5 +1,9 @@
-run: evenodd
-	./evenodd
+run: jit
+	./jit
+
+
+jit: jit.S
+	gcc jit.S -o jit
 
 evenodd: evenodd.S
 	gcc evenodd.S -o evenodd
