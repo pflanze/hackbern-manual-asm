@@ -69,7 +69,7 @@ oddP_end:
 #endif
 	
 main:
-	mov eax,1000090000
+	mov eax, 2000000000
 	call evenP
 	xor eax, 1
 	ret
