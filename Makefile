@@ -1,9 +1,9 @@
-run: forthy
-	./forthy
+run: hello
+	./hello
 
 
-forthy: forthy.S
-	gcc forthy.S -o forthy
+hello: hello.S
+	gcc hello.S -o hello
 
 evenodd: evenodd.S
 	gcc evenodd.S -o evenodd
