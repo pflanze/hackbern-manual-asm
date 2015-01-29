@@ -81,3 +81,29 @@ of the default AT&T syntax.
 
     $ gcc -O3 -S -fno-asynchronous-unwind-tables -masm=intel evenodd_C.c -o evenodd_C.s
 
+
+## Links
+
+[x86 Assembly](http://en.wikibooks.org/wiki/X86_Assembly) wikibook,
+good and short intro.
+
+[What I Dislike About
+GAS](http://x86asm.net/articles/what-i-dislike-about-gas/index.html)
+(why to prefer Intel over AT&T syntax; confirmed by people on `##asm`
+on freenode, and forum discussions about the article)
+
+enter and leave:
+[1](http://en.wikibooks.org/wiki/X86_Assembly/Control_Flow#Enter_and_Leave),
+[2](https://en.wikipedia.org/wiki/X86_assembly_language)
+
+[X86 calling conventions](https://en.wikipedia.org/wiki/X86_calling_conventions),
+covers both x86 and AMD64
+
+[System V Application Binary Interface, AMD64 Architecture Processor
+Supplement](http://www.x86-64.org/documentation_folder/abi-0.99.pdf),
+for more details on the AMD64 ABI (used by all operating systems
+except Windows)
+
+([Say hello to x64 Assembly](http://0xax.blogspot.ch/2014/08/say-hello-to-x64-assembly-part-1.html) (not used in the end))
+
+([sandpile.org](http://www.sandpile.org/), good overviews on the x86 opcodes)
